@@ -20,6 +20,7 @@ val=[0,1,2]
 objs=['Rock','Paper','Scissor']
 comp_count=0
 user_count=0
+draw_count=0
     
 
 print("***Welcome! This is ROCK-PAPER-SCISSOR, enter 'start'/'START' for playing***")
@@ -63,14 +64,16 @@ elif inp=='start'or inp=='START':
             comp_count+=1
         elif result==0:
             print("\n:) It's a draw (:")
+            draw_count+=1
 
         count+=1
 
 print("\n\nComputer's score is: ",comp_count)
 print("Your score is : ",user_count)
+print("Draw rounds: ",draw_count)
 if comp_count>user_count:
-    print("\n\n***    Hope you have Greater Luck next time    ***")
+    print(f"\n\n***    Hope you have Greater Luck next time    ***\n You loose by {comp_count-user_count} points")
 elif comp_count==user_count:
-    print("\n\n***    You and Computer had an equal Luck    ")
+    print("\n\n***    You and Computer had an equal Luck    ***")
 else:
-    print(f"\n\n***    Congratulations! You beat the Computer by {comp_count-user_count} points    ***")
+    print(f"\n\n***    Congratulations! You beat the Computer by {user_count-comp_count} points    ***")
